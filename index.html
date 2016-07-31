@@ -16,8 +16,8 @@
 <body>
     <style>
     body {
-        background-color: #eaeaea;
         font-family: sans-serif;
+        background: url('./bg.jpg') repeat-y #eaeaea;
     }
     a {
         text-decoration: none;
@@ -32,6 +32,13 @@
         color: #aaa;
         font-size: 26px;
         margin: 0 20px;
+    }
+
+    h1 i.material-icons {
+        vertical-align: middle;
+        font-size: 32px;
+        margin: 0 10px;
+        padding-bottom: 7px;
     }
     audio {
         display: block;
@@ -52,6 +59,7 @@
         margin: 10px;
         flex: 0 1 50rem;
         box-shadow: 4px 4px #ccc;
+        overflow-x: hidden;
     }
     .brick:hover {
         background-color: #eee;
@@ -68,7 +76,7 @@
     .icons a:hover i, .icons a:hover p {
         color: #999;
     }
-    .icons i {
+    .icons i.material-icons {
         font-size: 64px;
         color: #aaa;
     }
@@ -89,7 +97,7 @@
     }
 </style>
 
-<h1>Kusoikore Samplepack v0.1</h1>
+<h1><a href="kusopack0.1.zip"><i class="material-icons">archive</i></a> Kusoikore Samplepack v0.1 [WIP]</h1>
 <div class="wall">
     <div class="brick"> <a class="play" href="kusopack/77041_kasull_gaba2.wav">77041_kasull_gaba2.wav</a> <audio controls> <source src="kusopack/77041_kasull_gaba2.wav" type="audio/wav"> </audio> </div>
 
