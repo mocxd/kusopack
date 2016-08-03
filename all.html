@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1><a href="kusopack0.1.zip"><i class="material-icons">archive</i></a> <span class="txt"><a href="index.html">{{ site.title }}</a></span></h1>
+
+<div class="wall">
+    {% for post in site.posts %}
+    <div class="brick"> <a class="play" href="{{ post.title | prepend: site.sampleurl }}">{{ post.title }}</a> <audio controls> <source src="{{ post.title | prepend: site.sampleurl }}" type="audio/wav"> </audio> </div>
+    {% endfor %}
+    <div class="info">
+        <a href="index.html">Back</a>
+    </div>
+</div>

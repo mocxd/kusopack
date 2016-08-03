@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
-  <title>kuso</title>
+  <title>Kusoikore Sample Pack</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kusoikore Sample Pack v0.1">
   <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta property="og:title" content="Kusoikore Sample Pack" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mocxd.github.io/kusopack/" />
+  <meta property="og:image" content="{{ '/hamtaro_sm.png' | prepend: site.url + site.baseurl }}">
+  <meta property="og:description" content="v0.1">
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Kusoikore Sample Pack" />
   <meta name="twitter:site" content="@hyperblackmagic" />
+  <meta name="twitter:title" content="Kusoikore Sample Pack" />
   <meta name="twitter:description" content="v0.1" />
   <meta name="twitter:image" content="{{ '/hamtaro_sm.png' | prepend: site.url + site.baseurl }}" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 <body>
   <style>
   body {
     font-family: sans-serif;
-    background-image: url('./cbg.png'), url('./bg5.png');
-    background-repeat: no-repeat, repeat;
-    background-position: bottom, left top;
-    background-size: auto 100%, auto;
+    background-image: url('./cbg2.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: auto 100%;
     background-color: #eaeaea;
   }
   a {
@@ -39,8 +60,14 @@
     font-size: 36px;
     margin: 0 auto;
     max-width: 50rem;
-    transform: translateX(20px);
   }
+
+  @media (min-width: 600px) {
+    h1 {
+      transform: translateX(20px);
+    }
+  }
+
   h1 .txt {
     padding: 0 10px;
     background-color: #fff;
@@ -60,78 +87,110 @@
   }
   .wall {
   }
-  .wall > .brick {
+  .wall > .info {
     font-size: 24px;
     font-weight: 100;
     color: #aaa;
-    background-color: #fff;
-    border: solid 20px #fff;
-    max-width: 50rem;
-    margin: 20px auto;
-    box-shadow: 4px 4px #333;
-    overflow-x: hidden;
-  }
-  .brick:hover {
-    background-color: #ff6666;
-    border-color: #ff6666;
-  }
-  .brick:hover a {
-    color: #fff;
-  }
-  .brick:hover audio {
-    opacity: .3;
-  }
-  .icons {
-    max-width: 10rem;
     background-color: #eee;
-    flex: 0 1 50rem;
-    margin: 30px auto;
-    padding: 20px;
-    text-align: center;
+    border: solid 20px #eee;
+    margin: 20px auto;
+    overflow-x: hidden;
+    max-width: 50rem;
   }
-  .icons a:hover i, .icons a:hover p {
-    color: #999;
-  }
-  .icons i.material-icons {
-    font-size: 64px;
-    color: #ff6666;
-  }
-  .icons p {
-    line-height: 0;
-    font-size: 24px;
-    color: #ff6666;
-    display: inline-block;
-  }
-  mark {
-    padding: 8px;
-    margin-top: 10px;
-    margin-bottom: -10px;
-    background-color: #ff5b96;
-    color: #fff;
-    font-weight: 500;
-    display: block;
-  }
-</style>
+/*  .wall > .info > p {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    }*/
+    .wall .brick {
+      font-size: 24px;
+      font-weight: 100;
+      color: #aaa;
+      background-color: #fff;
+      border: solid 20px #fff;
+      max-width: 50rem;
+      margin: 20px auto;
+      box-shadow: 4px 4px #333;
+      overflow-x: hidden;
+    }
+    .brick:hover {
+      background-color: #ff6666;
+      border-color: #ff6666;
+    }
+    .brick:hover a {
+      color: #fff;
+    }
+    .brick:hover audio {
+      opacity: .3;
+    }
+    .icons {
+      width: 10rem;
+      background-color: #eee;
+      flex: 0 1 50rem;
+      margin: 30px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .icons.round {
+      border-radius: 100%;
+      width: 10rem;
+      height: 10rem;
+    }
+    .icons a:hover i, .icons a:hover p {
+      color: #999;
+    }
+    .icons i.material-icons {
+      font-size: 64px;
+      color: #ff6666;
+    }
+    .icons p {
+      line-height: 0;
+      font-size: 24px;
+      color: #ff6666;
+      display: inline-block;
+    }
+    .icons.round a {
+      display: block;
+      padding-top: 2rem;
+    }
 
-{{ content }}
+    p.center {
+      text-align: center;
+    }
 
-<div class="wall">
+    a.expand-btn p:first-child {
+      margin-top: 50px;
+    }
 
-  <div class="brick"> <a class="play" href="kusopack/77041_kasull_gaba2.wav">77041_kasull_gaba2.wav</a> <audio controls> <source src="kusopack/77041_kasull_gaba2.wav" type="audio/wav"> </audio> </div>
+    a.expand-btn i {
+      font-size: 48px;
+      color: #ff6666;
+      opacity: 0.1;
+      transition: opacity 0.2s linear;
+    }
 
-  <div class="brick"> <a class="play" href="kusopack/A-Men160bpm.wav">A-Men160bpm.wav</a> <audio controls> <source src="kusopack/A-Men160bpm.wav" type="audio/wav"> </audio> </div>
+    a.expand-btn:hover i {
+      color: #ff6666;
+      opacity: 1;
+      transition: opacity 0.2s linear;
+    }
 
-  <div class="brick"> <a class="play" href="kusopack/AudioRecordingonMondayafternoon.wav">AudioRecordingonMondayafternoon.wav</a> <audio controls> <source src="kusopack/AudioRecordingonMondayafternoon.wav" type="audio/wav"> </audio> </div>
+    mark {
+      padding: 8px;
+      margin-top: 10px;
+      margin-bottom: -10px;
+      background-color: #ff5b96;
+      color: #fff;
+      font-weight: 500;
+      display: block;
+    }
+  </style>
 
-  <div class="brick"> <a class="play" href="kusopack/CYmbal0001.aif">CYmbal0001.aif</a> <audio controls> <source src="kusopack/CYmbal0001.aif" type="audio/x-aiff"> </audio> </div>
+  {{ content }}
 
-  <div class="brick"> <a class="play" href="kusopack/oppai.wav">oppai.wav</a> <audio controls> <source src="kusopack/oppai.wav" type="audio/wav"> </audio> </div>
-
-  <div class="brick"> <a class="play" href="kusopack/TR-606_Snare.wav">TR-606_Snare.wav</a> <audio controls> <source src="kusopack/TR-606_Snare.wav" type="audio/wav"> </audio> </div>
-
-  <div class="brick"> <a class="play" href="kusopack/VEC2LoopsBreakbeat087.wav">VEC2LoopsBreakbeat087.wav</a> <audio controls> <source src="kusopack/VEC2LoopsBreakbeat087.wav" type="audio/wav"> </audio> </div>
-  <div class="icons">
-    <a href="kusopack0.1.zip">
+  <div class="wall">
+    <div class="icons">
+      <a href="kusopack0.1.zip">
         <i class="material-icons">archive</i><!--
         --><br><!--
       --><p>zip</p>

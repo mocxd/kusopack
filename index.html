@@ -2,11 +2,39 @@
 layout: default
 ---
 
-<h1><a href="kusopack0.1.zip"><i class="material-icons">archive</i></a> <span class="txt">Kusoikore Samplepack v0.1 [WIP]</span></h1>
+<h1><a href="kusopack0.1.zip"><i class="material-icons">archive</i></a> <span class="txt">{{ site.title }}</span></h1>
 
+<div class="icons round">
+    <a href="kusopack0.1.zip">
+        <i class="material-icons">archive</i><!--
+        --><br><!--
+    --><p>zip</p>
+</a>
+</div>
 
 <div class="wall">
-{% for post in site.posts %}
-<div class="brick"> <a class="play" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <audio controls> <source src="{{ post.url | prepend: site.baseurl }}" type="audio/wav"> </audio> </div>
-{% endfor %}
+    <div class="info">
+        <p>{{ site.description }}</p>
+        <p><a href="https://soundcloud.com/kusoikore-global-yakuza">@kusoikore-global-yakuza</a></p>
+        <p><a href="https://soundcloud.com/cdr-744708903">@CDR</a></p>
+    </div>
+    <div class="info">
+
+        <p>Showcase</p>
+        {% for post in site.posts %}
+        {% if post.best %}
+        <div class="brick"> <a class="play" href="{{ post.title | prepend: site.sampleurl }}">{{ post.title }}</a> <audio controls> <source src="{{ post.title | prepend: site.sampleurl }}" type="audio/wav"> </audio> </div>
+        {% endif %}
+        {% endfor %}
+        <a class="expand-btn" href="all.html">
+            <p class="center">View All {{ site.posts | size }} in Collection</p>
+            <p class="center"><i class="material-icons">add_circle_outline</i></p>
+        </a>
+
+    </div>
+
+    <div class="info">
+        <p>Design by HYPER</p>
+        <p><a href="https://twitter.com/hyperblackmagic">@hyperblackmagic</a></p>
+    </div>
 </div>
