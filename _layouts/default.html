@@ -38,13 +38,17 @@
 </head>
 <body>
   <style>
+/*  * {
+    box-sizing: border-box;
+  }*/
   body {
     font-family: sans-serif;
     background-image: url('./cbg2.png');
-    background-repeat: repeat-x;
+    background-repeat: repeat-y;
     background-position: bottom;
-    background-size: auto 100%;
-    background-color: #eaeaea;
+    background-size: 140% auto;
+    background-color: #ccc;
+    margin: 0;
   }
   a {
     text-decoration: none;
@@ -61,13 +65,11 @@
     margin: 0 auto;
     max-width: 50rem;
   }
-
   @media (min-width: 600px) {
     h1 {
       transform: translateX(20px);
     }
   }
-
   h1 .txt {
     padding: 0 10px;
     background-color: #fff;
@@ -83,8 +85,29 @@
     display: block;
     width: 100%;
     height: 50px;
-    opacity: .1;
+    opacity: .2;
   }
+  .hat {
+    background: #ccc url('./bgtop.png') no-repeat top left;
+    background-size: auto auto;
+  }
+  .screen {
+    padding: 40px 0;
+    height: 500px;
+    position: relative;
+  }
+  .screen.dark {
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .screen > .icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+
   .wall {
   }
   .wall > .info {
@@ -121,7 +144,7 @@
       color: #fff;
     }
     .brick:hover audio {
-      opacity: .3;
+      opacity: .5;
     }
     .icons {
       width: 10rem;
